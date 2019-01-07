@@ -15,7 +15,6 @@ from wand.image import Image
 from urllib.request import urlopen
 import numpy
 import sys
-import html
 
 # Configurable parameters
 grid_width = 16 # Width of grid to shrink to for color checking
@@ -67,7 +66,7 @@ for line in sys.stdin:
                     item_output.append('<span class="useful">USEFUL</span>')
 
                 # Output identifier third in row (giving priority to cover image and status)
-                item_output.append(identifier)
+                item_output.append('<a href="https://archive.org/details/{0}">{0}</a>'.format(identifier))
 
                 # Show standard deviation for each channel (for diagnostics)
                 item_output.append('({:.2f}, {:.2f}, {:.2f})'.format(deviations[0], deviations[1], deviations[2]))
