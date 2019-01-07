@@ -1,0 +1,628 @@
+
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Cover Analyzer</title>
+        <style>
+            body { font-family: sans-serif; }
+            th { text-align: left; }
+            td { padding: 4px; }
+            .useful { font-weight: bold; }
+            .not-useful { color: gray }
+            .error { color: red }
+        </style>
+    </head>
+    <body>
+        <table>
+            <tr>
+                <th>Cover Image</th>
+                <th>Useful?</th>
+                <th>Identifier</th>
+                <th>Std Deviation (R, G, B)</th>
+            </tr>
+
+<tr>
+<td><img src=https://archive.org/services/img/10000prenomsdumo0000ragu alt=""></td>
+<td><span class="useful">USEFUL</span></td>
+<td>10000prenomsdumo0000ragu</td>
+<td>(14.72, 15.02, 12.94)</td>
+</tr>
+<tr>
+<td><img src=https://archive.org/services/img/1001lowfatsoupss0000unse alt=""></td>
+<td><span class="useful">USEFUL</span></td>
+<td>1001lowfatsoupss0000unse</td>
+<td>(22.21, 27.14, 24.28)</td>
+</tr>
+<tr>
+<td><img src=https://archive.org/services/img/101footcaretipsf0000ahro alt=""></td>
+<td><span class="useful">USEFUL</span></td>
+<td>101footcaretipsf0000ahro</td>
+<td>(40.90, 35.94, 21.32)</td>
+</tr>
+<tr>
+<td><img src=https://archive.org/services/img/2002questionsans0000hayn alt=""></td>
+<td><span class="useful">USEFUL</span></td>
+<td>2002questionsans0000hayn</td>
+<td>(25.05, 65.04, 54.49)</td>
+</tr>
+<tr>
+<td><img src=https://archive.org/services/img/300incrediblethi0000pfei alt=""></td>
+<td><span class="useful">USEFUL</span></td>
+<td>300incrediblethi0000pfei</td>
+<td>(23.98, 46.15, 57.47)</td>
+</tr>
+<tr>
+<td><img src=https://archive.org/services/img/30daystomorespir0000abor alt=""></td>
+<td><span class="useful">USEFUL</span></td>
+<td>30daystomorespir0000abor</td>
+<td>(42.23, 40.34, 32.91)</td>
+</tr>
+<tr>
+<td><img src=https://archive.org/services/img/3dsolarsystem0000brie alt=""></td>
+<td><span class="useful">USEFUL</span></td>
+<td>3dsolarsystem0000brie</td>
+<td>(55.85, 49.16, 43.38)</td>
+</tr>
+<tr>
+<td><img src=https://archive.org/services/img/50yearsofnascar0000latf alt=""></td>
+<td><span class="useful">USEFUL</span></td>
+<td>50yearsofnascar0000latf</td>
+<td>(44.82, 39.41, 23.84)</td>
+</tr>
+<tr>
+<td><img src=https://archive.org/services/img/801questionskids0000unse alt=""></td>
+<td><span class="useful">USEFUL</span></td>
+<td>801questionskids0000unse</td>
+<td>(43.35, 44.05, 32.71)</td>
+</tr>
+<tr>
+<td><img src=https://archive.org/services/img/abckids0000will_v3i9 alt=""></td>
+<td><span class="useful">USEFUL</span></td>
+<td>abckids0000will_v3i9</td>
+<td>(57.01, 55.64, 56.48)</td>
+</tr>
+<tr>
+<td><img src=https://archive.org/services/img/abnormalpsycholo0000schw alt=""></td>
+<td><span class="useful">USEFUL</span></td>
+<td>abnormalpsycholo0000schw</td>
+<td>(32.19, 21.89, 12.88)</td>
+</tr>
+<tr>
+<td><img src=https://archive.org/services/img/aboriginalreconc0000mcin alt=""></td>
+<td><span class="useful">USEFUL</span></td>
+<td>aboriginalreconc0000mcin</td>
+<td>(39.00, 34.46, 33.30)</td>
+</tr>
+<tr>
+<td><img src=https://archive.org/services/img/adoptperfectdog0000bail alt=""></td>
+<td><span class="useful">USEFUL</span></td>
+<td>adoptperfectdog0000bail</td>
+<td>(71.58, 72.70, 73.04)</td>
+</tr>
+<tr>
+<td><img src=https://archive.org/services/img/adventuresonfile0000whit alt=""></td>
+<td><span class="useful">USEFUL</span></td>
+<td>adventuresonfile0000whit</td>
+<td>(53.50, 40.54, 41.25)</td>
+</tr>
+<tr>
+<td><img src=https://archive.org/services/img/affiliateselling0000helm alt=""></td>
+<td><span class="useful">USEFUL</span></td>
+<td>affiliateselling0000helm</td>
+<td>(60.91, 61.77, 59.41)</td>
+</tr>
+<tr>
+<td><img src=https://archive.org/services/img/africansofdiaspo0000thom alt=""></td>
+<td><span class="useful">USEFUL</span></td>
+<td>africansofdiaspo0000thom</td>
+<td>(29.37, 14.18, 12.03)</td>
+</tr>
+<tr>
+<td><img src=https://archive.org/services/img/agricultureintan0000unse alt=""></td>
+<td><span class="not-useful">not useful</span></td>
+<td>agricultureintan0000unse</td>
+<td>(1.66, 8.37, 9.26)</td>
+</tr>
+<tr>
+<td><img src=https://archive.org/services/img/allaboardallabou0000bent alt=""></td>
+<td><span class="useful">USEFUL</span></td>
+<td>allaboardallabou0000bent</td>
+<td>(52.75, 42.34, 38.54)</td>
+</tr>
+<tr>
+<td><img src=https://archive.org/services/img/allaboutbearsgra0000hsp alt=""></td>
+<td><span class="useful">USEFUL</span></td>
+<td>allaboutbearsgra0000hsp</td>
+<td>(23.72, 23.20, 21.91)</td>
+</tr>
+<tr>
+<td><img src=https://archive.org/services/img/allfornewbornbab0000root alt=""></td>
+<td><span class="useful">USEFUL</span></td>
+<td>allfornewbornbab0000root</td>
+<td>(44.53, 42.74, 42.82)</td>
+</tr>
+<tr>
+<td><img src=https://archive.org/services/img/allyalligatorssa0000pare alt=""></td>
+<td><span class="useful">USEFUL</span></td>
+<td>allyalligatorssa0000pare</td>
+<td>(39.03, 31.23, 43.44)</td>
+</tr>
+<tr>
+<td><img src=https://archive.org/services/img/amazingalmanac0000tesa alt=""></td>
+<td><span class="useful">USEFUL</span></td>
+<td>amazingalmanac0000tesa</td>
+<td>(46.91, 60.31, 48.08)</td>
+</tr>
+<tr>
+<td><img src=https://archive.org/services/img/amazingbookofrep0000wood alt=""></td>
+<td><span class="useful">USEFUL</span></td>
+<td>amazingbookofrep0000wood</td>
+<td>(51.60, 49.54, 50.97)</td>
+</tr>
+<tr>
+<td><img src=https://archive.org/services/img/americaatoddsint0000sidl alt=""></td>
+<td><span class="useful">USEFUL</span></td>
+<td>americaatoddsint0000sidl</td>
+<td>(52.10, 50.57, 37.29)</td>
+</tr>
+<tr>
+<td><img src=https://archive.org/services/img/americanphotogra0000unse alt=""></td>
+<td><span class="useful">USEFUL</span></td>
+<td>americanphotogra0000unse</td>
+<td>(63.47, 55.64, 46.48)</td>
+</tr>
+<tr>
+<td><img src=https://archive.org/services/img/angeraggressionv0000robb alt=""></td>
+<td><span class="useful">USEFUL</span></td>
+<td>angeraggressionv0000robb</td>
+<td>(47.03, 37.74, 38.45)</td>
+</tr>
+<tr>
+<td><img src=https://archive.org/services/img/anidifrancoright0000quir alt=""></td>
+<td><span class="useful">USEFUL</span></td>
+<td>anidifrancoright0000quir</td>
+<td>(73.09, 62.63, 44.52)</td>
+</tr>
+<tr>
+<td><img src=https://archive.org/services/img/antisensetechnol0000unse_p0m7 alt=""></td>
+<td><span class="not-useful">not useful</span></td>
+<td>antisensetechnol0000unse_p0m7</td>
+<td>(5.80, 5.85, 5.46)</td>
+</tr>
+<tr>
+<td><img src=https://archive.org/services/img/appleapplealliga0000acco alt=""></td>
+<td><span class="useful">USEFUL</span></td>
+<td>appleapplealliga0000acco</td>
+<td>(45.44, 40.98, 36.38)</td>
+</tr>
+<tr>
+<td><img src=https://archive.org/services/img/atomicbomb0000unse alt=""></td>
+<td><span class="useful">USEFUL</span></td>
+<td>atomicbomb0000unse</td>
+<td>(44.29, 53.82, 35.22)</td>
+</tr>
+<tr>
+<td><img src=https://archive.org/services/img/authorsindepthbr0000unse alt=""></td>
+<td><span class="useful">USEFUL</span></td>
+<td>authorsindepthbr0000unse</td>
+<td>(54.92, 55.68, 57.52)</td>
+</tr>
+<tr>
+<td><img src=https://archive.org/services/img/automotivemaster0000bora alt=""></td>
+<td><span class="useful">USEFUL</span></td>
+<td>automotivemaster0000bora</td>
+<td>(52.46, 42.38, 42.38)</td>
+</tr>
+<tr>
+<td><img src=https://archive.org/services/img/avoidingcyberfra0000bolo alt=""></td>
+<td><span class="useful">USEFUL</span></td>
+<td>avoidingcyberfra0000bolo</td>
+<td>(33.17, 40.55, 43.70)</td>
+</tr>
+<tr>
+<td><img src=https://archive.org/services/img/awesomeactivitie0000finn alt=""></td>
+<td><span class="useful">USEFUL</span></td>
+<td>awesomeactivitie0000finn</td>
+<td>(22.22, 22.42, 19.55)</td>
+</tr>
+<tr>
+<td><img src=https://archive.org/services/img/bachelorbydesign0000gabr alt=""></td>
+<td><span class="useful">USEFUL</span></td>
+<td>bachelorbydesign0000gabr</td>
+<td>(73.93, 69.64, 43.77)</td>
+</tr>
+<tr>
+<td><img src=https://archive.org/services/img/bangstwangsscien0000cobb alt=""></td>
+<td><span class="useful">USEFUL</span></td>
+<td>bangstwangsscien0000cobb</td>
+<td>(44.88, 44.82, 24.43)</td>
+</tr>
+<tr>
+<td><img src=https://archive.org/services/img/banishyourbellbu0000prev alt=""></td>
+<td><span class="useful">USEFUL</span></td>
+<td>banishyourbellbu0000prev</td>
+<td>(38.57, 45.35, 58.11)</td>
+</tr>
+<tr>
+<td><img src=https://archive.org/services/img/barefootwaterski0000olek alt=""></td>
+<td><span class="useful">USEFUL</span></td>
+<td>barefootwaterski0000olek</td>
+<td>(59.08, 55.26, 56.96)</td>
+</tr>
+<tr>
+<td><img src=https://archive.org/services/img/basilalkazzirite0000kusp alt=""></td>
+<td><span class="useful">USEFUL</span></td>
+<td>basilalkazzirite0000kusp</td>
+<td>(23.85, 25.39, 34.06)</td>
+</tr>
+<tr>
+<td><img src=https://archive.org/services/img/bats0000gene alt=""></td>
+<td><span class="useful">USEFUL</span></td>
+<td>bats0000gene</td>
+<td>(25.43, 28.76, 34.81)</td>
+</tr>
+<tr>
+<td><img src=https://archive.org/services/img/batsaroundclock0000appe alt=""></td>
+<td><span class="useful">USEFUL</span></td>
+<td>batsaroundclock0000appe</td>
+<td>(51.88, 38.01, 23.14)</td>
+</tr>
+<tr>
+<td><img src=https://archive.org/services/img/bearinglifewomen0000unse alt=""></td>
+<td><span class="not-useful">not useful</span></td>
+<td>bearinglifewomen0000unse</td>
+<td>(6.43, 6.32, 6.77)</td>
+</tr>
+<tr>
+<td><img src=https://archive.org/services/img/bearlovesopposit0000thor alt=""></td>
+<td><span class="useful">USEFUL</span></td>
+<td>bearlovesopposit0000thor</td>
+<td>(51.08, 53.71, 61.83)</td>
+</tr>
+<tr>
+<td><img src=https://archive.org/services/img/beggarsthrone0000falc alt=""></td>
+<td><span class="useful">USEFUL</span></td>
+<td>beggarsthrone0000falc</td>
+<td>(44.11, 28.66, 31.17)</td>
+</tr>
+<tr>
+<td><img src=https://archive.org/services/img/beginningsqlserv0000will alt=""></td>
+<td><span class="useful">USEFUL</span></td>
+<td>beginningsqlserv0000will</td>
+<td>(26.41, 58.75, 61.96)</td>
+</tr>
+<tr>
+<td><img src=https://archive.org/services/img/bestofbizarrenew0000unse alt=""></td>
+<td><span class="useful">USEFUL</span></td>
+<td>bestofbizarrenew0000unse</td>
+<td>(48.44, 58.87, 19.77)</td>
+</tr>
+<tr>
+<td><img src=https://archive.org/services/img/bigbookofknowled0000farn alt=""></td>
+<td><span class="useful">USEFUL</span></td>
+<td>bigbookofknowled0000farn</td>
+<td>(45.20, 74.44, 78.60)</td>
+</tr>
+<tr>
+<td><img src=https://archive.org/services/img/bikingtoarcticci0000john alt=""></td>
+<td><span class="useful">USEFUL</span></td>
+<td>bikingtoarcticci0000john</td>
+<td>(56.18, 59.16, 57.23)</td>
+</tr>
+<tr>
+<td><img src=https://archive.org/services/img/blackbeautygreat0000jenn alt=""></td>
+<td><span class="useful">USEFUL</span></td>
+<td>blackbeautygreat0000jenn</td>
+<td>(58.22, 59.56, 64.17)</td>
+</tr>
+<tr>
+<td><img src=https://archive.org/services/img/blackleschainesd0000ohlp alt=""></td>
+<td><span class="useful">USEFUL</span></td>
+<td>blackleschainesd0000ohlp</td>
+<td>(42.06, 30.33, 11.49)</td>
+</tr>
+<tr>
+<td><img src=https://archive.org/services/img/bodysculpturepla0000engl alt=""></td>
+<td><span class="useful">USEFUL</span></td>
+<td>bodysculpturepla0000engl</td>
+<td>(38.77, 26.12, 19.59)</td>
+</tr>
+<tr>
+<td><img src=https://archive.org/services/img/bolivia0000fife alt=""></td>
+<td><span class="useful">USEFUL</span></td>
+<td>bolivia0000fife</td>
+<td>(12.03, 57.28, 97.70)</td>
+</tr>
+<tr>
+<td><img src=https://archive.org/services/img/bordergamespolic0000andr alt=""></td>
+<td><span class="useful">USEFUL</span></td>
+<td>bordergamespolic0000andr</td>
+<td>(40.50, 28.79, 24.32)</td>
+</tr>
+<tr>
+<td><img src=https://archive.org/services/img/bravenewservices0000gute alt=""></td>
+<td><span class="useful">USEFUL</span></td>
+<td>bravenewservices0000gute</td>
+<td>(64.93, 50.19, 40.52)</td>
+</tr>
+<tr>
+<td><img src=https://archive.org/services/img/breakingsurface0000unse alt=""></td>
+<td><span class="useful">USEFUL</span></td>
+<td>breakingsurface0000unse</td>
+<td>(33.79, 34.29, 32.60)</td>
+</tr>
+<tr>
+<td><img src=https://archive.org/services/img/brendasgiftnovel0000yate alt=""></td>
+<td><span class="useful">USEFUL</span></td>
+<td>brendasgiftnovel0000yate</td>
+<td>(14.61, 23.00, 25.88)</td>
+</tr>
+<tr>
+<td><img src=https://archive.org/services/img/brideofhearts0000lynn alt=""></td>
+<td><span class="useful">USEFUL</span></td>
+<td>brideofhearts0000lynn</td>
+<td>(78.21, 63.97, 62.21)</td>
+</tr>
+<tr>
+<td><img src=https://archive.org/services/img/brighterthanbagh0000bhat alt=""></td>
+<td><span class="useful">USEFUL</span></td>
+<td>brighterthanbagh0000bhat</td>
+<td>(67.10, 76.59, 67.70)</td>
+</tr>
+<tr>
+<td><img src=https://archive.org/services/img/bulletsonwaterca0000grou alt=""></td>
+<td><span class="useful">USEFUL</span></td>
+<td>bulletsonwaterca0000grou</td>
+<td>(33.20, 44.98, 33.37)</td>
+</tr>
+<tr>
+<td><img src=https://archive.org/services/img/bunnysnumbers0000mccu_x0e9 alt=""></td>
+<td><span class="useful">USEFUL</span></td>
+<td>bunnysnumbers0000mccu_x0e9</td>
+<td>(24.49, 28.26, 38.93)</td>
+</tr>
+<tr>
+<td><img src=https://archive.org/services/img/busywomanscookbo0000mcfa alt=""></td>
+<td><span class="useful">USEFUL</span></td>
+<td>busywomanscookbo0000mcfa</td>
+<td>(27.88, 22.89, 16.47)</td>
+</tr>
+<tr>
+<td><img src=https://archive.org/services/img/cambridgediction0000unse alt=""></td>
+<td><span class="useful">USEFUL</span></td>
+<td>cambridgediction0000unse</td>
+<td>(33.82, 34.95, 50.43)</td>
+</tr>
+<tr>
+<td><img src=https://archive.org/services/img/canadianpolitics0000dyck_m4n9 alt=""></td>
+<td><span class="useful">USEFUL</span></td>
+<td>canadianpolitics0000dyck_m4n9</td>
+<td>(57.81, 38.32, 24.15)</td>
+</tr>
+<tr>
+<td><img src=https://archive.org/services/img/canyoukeepsecret0000dayl alt=""></td>
+<td><span class="useful">USEFUL</span></td>
+<td>canyoukeepsecret0000dayl</td>
+<td>(61.37, 50.38, 47.38)</td>
+</tr>
+<tr>
+<td><img src=https://archive.org/services/img/capturedinmiddle0000lars_i8r9 alt=""></td>
+<td><span class="useful">USEFUL</span></td>
+<td>capturedinmiddle0000lars_i8r9</td>
+<td>(64.08, 71.52, 74.04)</td>
+</tr>
+<tr>
+<td><img src=https://archive.org/services/img/celebrateholiday0000unse alt=""></td>
+<td><span class="useful">USEFUL</span></td>
+<td>celebrateholiday0000unse</td>
+<td>(44.98, 34.53, 19.19)</td>
+</tr>
+<tr>
+<td><img src=https://archive.org/services/img/changeonruncompe0000kaym alt=""></td>
+<td><span class="useful">USEFUL</span></td>
+<td>changeonruncompe0000kaym</td>
+<td>(34.82, 45.03, 14.47)</td>
+</tr>
+<tr>
+<td><img src=https://archive.org/services/img/changingpolitics0000rice alt=""></td>
+<td><span class="useful">USEFUL</span></td>
+<td>changingpolitics0000rice</td>
+<td>(15.29, 10.08, 2.30)</td>
+</tr>
+<tr>
+<td><img src=https://archive.org/services/img/chansonsdrolesch0000unse alt=""></td>
+<td><span class="useful">USEFUL</span></td>
+<td>chansonsdrolesch0000unse</td>
+<td>(61.74, 53.07, 47.43)</td>
+</tr>
+<tr>
+<td><img src=https://archive.org/services/img/chanukah0000marx alt=""></td>
+<td><span class="useful">USEFUL</span></td>
+<td>chanukah0000marx</td>
+<td>(67.69, 57.24, 46.35)</td>
+</tr>
+<tr>
+<td><img src=https://archive.org/services/img/chasingriley0000lath alt=""></td>
+<td><span class="useful">USEFUL</span></td>
+<td>chasingriley0000lath</td>
+<td>(36.65, 32.22, 39.06)</td>
+</tr>
+<tr>
+<td><img src=https://archive.org/services/img/chemistrycentral08brow alt=""></td>
+<td><span class="useful">USEFUL</span></td>
+<td>chemistrycentral08brow</td>
+<td>(44.64, 51.63, 61.88)</td>
+</tr>
+<tr>
+<td><img src=https://archive.org/services/img/chicdesrecettesp0000unse alt=""></td>
+<td><span class="useful">USEFUL</span></td>
+<td>chicdesrecettesp0000unse</td>
+<td>(77.69, 74.52, 73.48)</td>
+</tr>
+<tr>
+<td><img src=https://archive.org/services/img/cinderella0000frys alt=""></td>
+<td><span class="useful">USEFUL</span></td>
+<td>cinderella0000frys</td>
+<td>(57.40, 55.24, 48.52)</td>
+</tr>
+<tr>
+<td><img src=https://archive.org/services/img/citizensguidetog0000barr alt=""></td>
+<td><span class="useful">USEFUL</span></td>
+<td>citizensguidetog0000barr</td>
+<td>(44.69, 57.25, 53.67)</td>
+</tr>
+<tr>
+<td><img src=https://archive.org/services/img/clarinets0000harr alt=""></td>
+<td><span class="useful">USEFUL</span></td>
+<td>clarinets0000harr</td>
+<td>(18.45, 52.22, 55.18)</td>
+</tr>
+<tr>
+<td><img src=https://archive.org/services/img/classicfairytale0000unse alt=""></td>
+<td><span class="useful">USEFUL</span></td>
+<td>classicfairytale0000unse</td>
+<td>(57.68, 48.67, 63.04)</td>
+</tr>
+<tr>
+<td><img src=https://archive.org/services/img/clothescraftsina0000daws alt=""></td>
+<td><span class="useful">USEFUL</span></td>
+<td>clothescraftsina0000daws</td>
+<td>(66.04, 75.82, 77.93)</td>
+</tr>
+<tr>
+<td><img src=https://archive.org/services/img/clothescraftsinv0000stee alt=""></td>
+<td><span class="useful">USEFUL</span></td>
+<td>clothescraftsinv0000stee</td>
+<td>(61.54, 62.24, 65.72)</td>
+</tr>
+<tr>
+<td><img src=https://archive.org/services/img/collectedreading0000unse alt=""></td>
+<td><span class="useful">USEFUL</span></td>
+<td>collectedreading0000unse</td>
+<td>(45.09, 47.24, 35.15)</td>
+</tr>
+<tr>
+<td><img src=https://archive.org/services/img/colonyofpennsylv0000whit alt=""></td>
+<td><span class="useful">USEFUL</span></td>
+<td>colonyofpennsylv0000whit</td>
+<td>(48.37, 49.05, 43.92)</td>
+</tr>
+<tr>
+<td><img src=https://archive.org/services/img/commentvoyagerav0000ecou alt=""></td>
+<td><span class="useful">USEFUL</span></td>
+<td>commentvoyagerav0000ecou</td>
+<td>(50.81, 49.49, 55.25)</td>
+</tr>
+<tr>
+<td><img src=https://archive.org/services/img/communicatingglo0000schu alt=""></td>
+<td><span class="useful">USEFUL</span></td>
+<td>communicatingglo0000schu</td>
+<td>(54.07, 39.29, 24.17)</td>
+</tr>
+<tr>
+<td><img src=https://archive.org/services/img/communicationkey0000wrig alt=""></td>
+<td><span class="useful">USEFUL</span></td>
+<td>communicationkey0000wrig</td>
+<td>(60.89, 30.89, 24.82)</td>
+</tr>
+<tr>
+<td><img src=https://archive.org/services/img/communionbloodno0000yarb alt=""></td>
+<td><span class="useful">USEFUL</span></td>
+<td>communionbloodno0000yarb</td>
+<td>(33.38, 30.53, 29.26)</td>
+</tr>
+<tr>
+<td><img src=https://archive.org/services/img/completeguidetow0000fish alt=""></td>
+<td><span class="useful">USEFUL</span></td>
+<td>completeguidetow0000fish</td>
+<td>(54.50, 53.72, 54.86)</td>
+</tr>
+<tr>
+<td><img src=https://archive.org/services/img/completeidiotsgu0000irel alt=""></td>
+<td><span class="useful">USEFUL</span></td>
+<td>completeidiotsgu0000irel</td>
+<td>(46.51, 56.47, 72.62)</td>
+</tr>
+<tr>
+<td><img src=https://archive.org/services/img/completemedicals0000goli alt=""></td>
+<td><span class="useful">USEFUL</span></td>
+<td>completemedicals0000goli</td>
+<td>(30.28, 30.16, 29.30)</td>
+</tr>
+<tr>
+<td><img src=https://archive.org/services/img/comprehensivereh0000unse alt=""></td>
+<td><span class="not-useful">not useful</span></td>
+<td>comprehensivereh0000unse</td>
+<td>(3.35, 3.27, 3.16)</td>
+</tr>
+<tr>
+<td><img src=https://archive.org/services/img/confrontingiraqu0000byma alt=""></td>
+<td><span class="useful">USEFUL</span></td>
+<td>confrontingiraqu0000byma</td>
+<td>(56.69, 48.17, 26.47)</td>
+</tr>
+<tr>
+<td><img src=https://archive.org/services/img/constructingsust0000harr alt=""></td>
+<td><span class="useful">USEFUL</span></td>
+<td>constructingsust0000harr</td>
+<td>(31.38, 39.43, 38.69)</td>
+</tr>
+<tr>
+<td><img src=https://archive.org/services/img/contemporaryedit0000frie alt=""></td>
+<td><span class="useful">USEFUL</span></td>
+<td>contemporaryedit0000frie</td>
+<td>(63.95, 69.82, 26.24)</td>
+</tr>
+<tr>
+<td><img src=https://archive.org/services/img/conversationsave0000wals alt=""></td>
+<td><span class="useful">USEFUL</span></td>
+<td>conversationsave0000wals</td>
+<td>(68.91, 70.30, 24.20)</td>
+</tr>
+<tr>
+<td><img src=https://archive.org/services/img/cooksencyclopedi0000unse alt=""></td>
+<td><span class="useful">USEFUL</span></td>
+<td>cooksencyclopedi0000unse</td>
+<td>(31.18, 25.68, 15.85)</td>
+</tr>
+<tr>
+<td><img src=https://archive.org/services/img/copingwithchroni0000mill_b8z6 alt=""></td>
+<td><span class="useful">USEFUL</span></td>
+<td>copingwithchroni0000mill_b8z6</td>
+<td>(59.87, 55.78, 48.79)</td>
+</tr>
+<tr>
+<td><img src=https://archive.org/services/img/courtship0000mcle alt=""></td>
+<td><span class="useful">USEFUL</span></td>
+<td>courtship0000mcle</td>
+<td>(59.29, 58.65, 50.18)</td>
+</tr>
+<tr>
+<td><img src=https://archive.org/services/img/covertocovergett0000math alt=""></td>
+<td><span class="useful">USEFUL</span></td>
+<td>covertocovergett0000math</td>
+<td>(35.05, 51.83, 61.51)</td>
+</tr>
+<tr>
+<td><img src=https://archive.org/services/img/craftingyourownh0000brau alt=""></td>
+<td><span class="useful">USEFUL</span></td>
+<td>craftingyourownh0000brau</td>
+<td>(67.99, 55.32, 50.03)</td>
+</tr>
+<tr>
+<td><img src=https://archive.org/services/img/createlifethatti0000zogl alt=""></td>
+<td><span class="useful">USEFUL</span></td>
+<td>createlifethatti0000zogl</td>
+<td>(21.43, 19.14, 13.69)</td>
+</tr>
+<tr>
+<td><img src=https://archive.org/services/img/creatingsocietie0000hoer alt=""></td>
+<td><span class="not-useful">not useful</span></td>
+<td>creatingsocietie0000hoer</td>
+<td>(2.84, 2.84, 2.84)</td>
+</tr>
+
+        </table>
+    </body>
+</html>
+

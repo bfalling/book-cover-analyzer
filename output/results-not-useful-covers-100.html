@@ -1,0 +1,628 @@
+
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Cover Analyzer</title>
+        <style>
+            body { font-family: sans-serif; }
+            th { text-align: left; }
+            td { padding: 4px; }
+            .useful { font-weight: bold; }
+            .not-useful { color: gray }
+            .error { color: red }
+        </style>
+    </head>
+    <body>
+        <table>
+            <tr>
+                <th>Cover Image</th>
+                <th>Useful?</th>
+                <th>Identifier</th>
+                <th>Std Deviation (R, G, B)</th>
+            </tr>
+
+<tr>
+<td><img src=https://archive.org/services/img/10sermonspreache00donnuoft alt=""></td>
+<td><span class="not-useful">not useful</span></td>
+<td>10sermonspreache00donnuoft</td>
+<td>(2.15, 3.91, 3.36)</td>
+</tr>
+<tr>
+<td><img src=https://archive.org/services/img/191418medicalserv00macpuoft alt=""></td>
+<td><span class="not-useful">not useful</span></td>
+<td>191418medicalserv00macpuoft</td>
+<td>(1.09, 2.10, 2.15)</td>
+</tr>
+<tr>
+<td><img src=https://archive.org/services/img/1922forniaminera00bradrich alt=""></td>
+<td><span class="not-useful">not useful</span></td>
+<td>1922forniaminera00bradrich</td>
+<td>(8.75, 7.55, 4.06)</td>
+</tr>
+<tr>
+<td><img src=https://archive.org/services/img/250thanniversary00nort alt=""></td>
+<td><span class="not-useful">not useful</span></td>
+<td>250thanniversary00nort</td>
+<td>(7.48, 6.71, 6.10)</td>
+</tr>
+<tr>
+<td><img src=https://archive.org/services/img/75iesetentacinco00rochuoft alt=""></td>
+<td><span class="not-useful">not useful</span></td>
+<td>75iesetentacinco00rochuoft</td>
+<td>(4.42, 4.30, 1.90)</td>
+</tr>
+<tr>
+<td><img src=https://archive.org/services/img/abstractoffourte00unit alt=""></td>
+<td><span class="not-useful">not useful</span></td>
+<td>abstractoffourte00unit</td>
+<td>(6.77, 2.53, 0.99)</td>
+</tr>
+<tr>
+<td><img src=https://archive.org/services/img/addressestogerma00fich alt=""></td>
+<td><span class="not-useful">not useful</span></td>
+<td>addressestogerma00fich</td>
+<td>(1.68, 1.77, 1.66)</td>
+</tr>
+<tr>
+<td><img src=https://archive.org/services/img/advancedlessonsi00nitcrich alt=""></td>
+<td><span class="not-useful">not useful</span></td>
+<td>advancedlessonsi00nitcrich</td>
+<td>(7.10, 6.79, 5.78)</td>
+</tr>
+<tr>
+<td><img src=https://archive.org/services/img/advertisingselli192526kendrich alt=""></td>
+<td><span class="not-useful">not useful</span></td>
+<td>advertisingselli192526kendrich</td>
+<td>(3.58, 4.48, 4.73)</td>
+</tr>
+<tr>
+<td><img src=https://archive.org/services/img/advertisingselli192728kendrich alt=""></td>
+<td><span class="not-useful">not useful</span></td>
+<td>advertisingselli192728kendrich</td>
+<td>(2.27, 3.70, 3.53)</td>
+</tr>
+<tr>
+<td><img src=https://archive.org/services/img/advertisingselli193132kendrich alt=""></td>
+<td><span class="not-useful">not useful</span></td>
+<td>advertisingselli193132kendrich</td>
+<td>(4.90, 5.03, 5.56)</td>
+</tr>
+<tr>
+<td><img src=https://archive.org/services/img/advertvol8sellnew192627yrich alt=""></td>
+<td><span class="not-useful">not useful</span></td>
+<td>advertvol8sellnew192627yrich</td>
+<td>(3.39, 5.56, 5.45)</td>
+</tr>
+<tr>
+<td><img src=https://archive.org/services/img/agromeck1923nort alt=""></td>
+<td><span class="useful">USEFUL</span></td>
+<td>agromeck1923nort</td>
+<td>(52.96, 37.72, 11.28)</td>
+</tr>
+<tr>
+<td><img src=https://archive.org/services/img/albrechtaltdorfe00altduoft alt=""></td>
+<td><span class="not-useful">not useful</span></td>
+<td>albrechtaltdorfe00altduoft</td>
+<td>(2.50, 1.32, 1.20)</td>
+</tr>
+<tr>
+<td><img src=https://archive.org/services/img/albrechtaltdorfe00tietuoft alt=""></td>
+<td><span class="useful">USEFUL</span></td>
+<td>albrechtaltdorfe00tietuoft</td>
+<td>(23.99, 19.05, 9.16)</td>
+</tr>
+<tr>
+<td><img src=https://archive.org/services/img/alexandredumaset00grosuoft alt=""></td>
+<td><span class="not-useful">not useful</span></td>
+<td>alexandredumaset00grosuoft</td>
+<td>(4.05, 4.06, 1.93)</td>
+</tr>
+<tr>
+<td><img src=https://archive.org/services/img/aliceimspiegella00carrrich alt=""></td>
+<td><span class="not-useful">not useful</span></td>
+<td>aliceimspiegella00carrrich</td>
+<td>(8.68, 5.49, 3.79)</td>
+</tr>
+<tr>
+<td><img src=https://archive.org/services/img/alkylationofbenz00berr alt=""></td>
+<td><span class="not-useful">not useful</span></td>
+<td>alkylationofbenz00berr</td>
+<td>(4.05, 3.62, 2.58)</td>
+</tr>
+<tr>
+<td><img src=https://archive.org/services/img/allgemeinebiolo00hert alt=""></td>
+<td><span class="not-useful">not useful</span></td>
+<td>allgemeinebiolo00hert</td>
+<td>(5.63, 5.62, 5.37)</td>
+</tr>
+<tr>
+<td><img src=https://archive.org/services/img/almanachdegotha00unse_94 alt=""></td>
+<td><span class="useful">USEFUL</span></td>
+<td>almanachdegotha00unse_94</td>
+<td>(16.84, 15.39, 12.41)</td>
+</tr>
+<tr>
+<td><img src=https://archive.org/services/img/altislndischeu00noreuoft alt=""></td>
+<td><span class="not-useful">not useful</span></td>
+<td>altislndischeu00noreuoft</td>
+<td>(3.19, 3.06, 2.73)</td>
+</tr>
+<tr>
+<td><img src=https://archive.org/services/img/alumnidirectorya00ohio alt=""></td>
+<td><span class="not-useful">not useful</span></td>
+<td>alumnidirectorya00ohio</td>
+<td>(10.78, 9.25, 5.24)</td>
+</tr>
+<tr>
+<td><img src=https://archive.org/services/img/alumniregister00birm alt=""></td>
+<td><span class="useful">USEFUL</span></td>
+<td>alumniregister00birm</td>
+<td>(34.96, 39.53, 37.89)</td>
+</tr>
+<tr>
+<td><img src=https://archive.org/services/img/amberitsphysical03farr alt=""></td>
+<td><span class="not-useful">not useful</span></td>
+<td>amberitsphysical03farr</td>
+<td>(2.03, 2.01, 2.78)</td>
+</tr>
+<tr>
+<td><img src=https://archive.org/services/img/americanmachinis58newyuoft alt=""></td>
+<td><span class="not-useful">not useful</span></td>
+<td>americanmachinis58newyuoft</td>
+<td>(2.10, 2.10, 2.53)</td>
+</tr>
+<tr>
+<td><img src=https://archive.org/services/img/americanmachinis59newyuoft alt=""></td>
+<td><span class="not-useful">not useful</span></td>
+<td>americanmachinis59newyuoft</td>
+<td>(4.08, 3.78, 1.97)</td>
+</tr>
+<tr>
+<td><img src=https://archive.org/services/img/ammunitioninstru00unit alt=""></td>
+<td><span class="not-useful">not useful</span></td>
+<td>ammunitioninstru00unit</td>
+<td>(6.80, 3.91, 1.87)</td>
+</tr>
+<tr>
+<td><img src=https://archive.org/services/img/ancientegyptians00edgeuoft alt=""></td>
+<td><span class="not-useful">not useful</span></td>
+<td>ancientegyptians00edgeuoft</td>
+<td>(9.46, 9.37, 10.11)</td>
+</tr>
+<tr>
+<td><img src=https://archive.org/services/img/andrgideetlm00braauoft alt=""></td>
+<td><span class="not-useful">not useful</span></td>
+<td>andrgideetlm00braauoft</td>
+<td>(3.92, 2.96, 3.09)</td>
+</tr>
+<tr>
+<td><img src=https://archive.org/services/img/animallifeindese00buxtuoft alt=""></td>
+<td><span class="not-useful">not useful</span></td>
+<td>animallifeindese00buxtuoft</td>
+<td>(6.39, 1.87, 2.33)</td>
+</tr>
+<tr>
+<td><img src=https://archive.org/services/img/annalsofwomelsdo00crol alt=""></td>
+<td><span class="not-useful">not useful</span></td>
+<td>annalsofwomelsdo00crol</td>
+<td>(13.30, 11.17, 6.72)</td>
+</tr>
+<tr>
+<td><img src=https://archive.org/services/img/annual23newy alt=""></td>
+<td><span class="not-useful">not useful</span></td>
+<td>annual23newy</td>
+<td>(9.69, 8.50, 9.70)</td>
+</tr>
+<tr>
+<td><img src=https://archive.org/services/img/annualceremonyof08lint alt=""></td>
+<td><span class="not-useful">not useful</span></td>
+<td>annualceremonyof08lint</td>
+<td>(1.98, 2.54, 3.29)</td>
+</tr>
+<tr>
+<td><img src=https://archive.org/services/img/annualregiste19221923unse alt=""></td>
+<td><span class="not-useful">not useful</span></td>
+<td>annualregiste19221923unse</td>
+<td>(1.23, 1.23, 1.23)</td>
+</tr>
+<tr>
+<td><img src=https://archive.org/services/img/anthologiedesmat01liuoft alt=""></td>
+<td><span class="not-useful">not useful</span></td>
+<td>anthologiedesmat01liuoft</td>
+<td>(1.88, 0.70, 1.43)</td>
+</tr>
+<tr>
+<td><img src=https://archive.org/services/img/anthologiedesmat02liuoft alt=""></td>
+<td><span class="not-useful">not useful</span></td>
+<td>anthologiedesmat02liuoft</td>
+<td>(2.17, 0.84, 2.13)</td>
+</tr>
+<tr>
+<td><img src=https://archive.org/services/img/anthologiedespo00liuoft alt=""></td>
+<td><span class="not-useful">not useful</span></td>
+<td>anthologiedespo00liuoft</td>
+<td>(1.35, 2.84, 5.45)</td>
+</tr>
+<tr>
+<td><img src=https://archive.org/services/img/anthropology00kroe alt=""></td>
+<td><span class="useful">USEFUL</span></td>
+<td>anthropology00kroe</td>
+<td>(15.91, 14.11, 7.53)</td>
+</tr>
+<tr>
+<td><img src=https://archive.org/services/img/antiquescuriosin00valluoft alt=""></td>
+<td><span class="not-useful">not useful</span></td>
+<td>antiquescuriosin00valluoft</td>
+<td>(5.45, 2.62, 2.30)</td>
+</tr>
+<tr>
+<td><img src=https://archive.org/services/img/antoniocaracciol00rose alt=""></td>
+<td><span class="not-useful">not useful</span></td>
+<td>antoniocaracciol00rose</td>
+<td>(7.02, 5.94, 7.82)</td>
+</tr>
+<tr>
+<td><img src=https://archive.org/services/img/apocolocyntosisd00seneuoft alt=""></td>
+<td><span class="useful">USEFUL</span></td>
+<td>apocolocyntosisd00seneuoft</td>
+<td>(21.69, 15.77, 12.29)</td>
+</tr>
+<tr>
+<td><img src=https://archive.org/services/img/appliedanatom00bowe alt=""></td>
+<td><span class="not-useful">not useful</span></td>
+<td>appliedanatom00bowe</td>
+<td>(2.45, 3.74, 1.70)</td>
+</tr>
+<tr>
+<td><img src=https://archive.org/services/img/arabconquestsinc00gibbuoft alt=""></td>
+<td><span class="not-useful">not useful</span></td>
+<td>arabconquestsinc00gibbuoft</td>
+<td>(1.21, 1.96, 1.27)</td>
+</tr>
+<tr>
+<td><img src=https://archive.org/services/img/aramaicpapyrioff00ahikuoft alt=""></td>
+<td><span class="useful">USEFUL</span></td>
+<td>aramaicpapyrioff00ahikuoft</td>
+<td>(16.94, 17.23, 15.93)</td>
+</tr>
+<tr>
+<td><img src=https://archive.org/services/img/architecturedeco00riccuoft alt=""></td>
+<td><span class="not-useful">not useful</span></td>
+<td>architecturedeco00riccuoft</td>
+<td>(1.74, 3.58, 4.25)</td>
+</tr>
+<tr>
+<td><img src=https://archive.org/services/img/archiviozoologic10unio alt=""></td>
+<td><span class="not-useful">not useful</span></td>
+<td>archiviozoologic10unio</td>
+<td>(4.46, 5.21, 4.54)</td>
+</tr>
+<tr>
+<td><img src=https://archive.org/services/img/aristotelesgrund00jaeguoft alt=""></td>
+<td><span class="not-useful">not useful</span></td>
+<td>aristotelesgrund00jaeguoft</td>
+<td>(4.77, 5.36, 6.75)</td>
+</tr>
+<tr>
+<td><img src=https://archive.org/services/img/arrowengli3419231925penn alt=""></td>
+<td><span class="not-useful">not useful</span></td>
+<td>arrowengli3419231925penn</td>
+<td>(1.78, 4.40, 6.63)</td>
+</tr>
+<tr>
+<td><img src=https://archive.org/services/img/artofchinesepott00hobs alt=""></td>
+<td><span class="useful">USEFUL</span></td>
+<td>artofchinesepott00hobs</td>
+<td>(17.96, 16.54, 7.97)</td>
+</tr>
+<tr>
+<td><img src=https://archive.org/services/img/ashepresbyterian67jeff alt=""></td>
+<td><span class="not-useful">not useful</span></td>
+<td>ashepresbyterian67jeff</td>
+<td>(1.94, 1.94, 1.40)</td>
+</tr>
+<tr>
+<td><img src=https://archive.org/services/img/astowatsashownch23amer alt=""></td>
+<td><span class="not-useful">not useful</span></td>
+<td>astowatsashownch23amer</td>
+<td>(1.43, 1.43, 0.80)</td>
+</tr>
+<tr>
+<td><img src=https://archive.org/services/img/athena19ohio alt=""></td>
+<td><span class="not-useful">not useful</span></td>
+<td>athena19ohio</td>
+<td>(5.99, 8.03, 1.24)</td>
+</tr>
+<tr>
+<td><img src=https://archive.org/services/img/atombohrtheoryof00kramuoft alt=""></td>
+<td><span class="not-useful">not useful</span></td>
+<td>atombohrtheoryof00kramuoft</td>
+<td>(9.61, 9.52, 9.09)</td>
+</tr>
+<tr>
+<td><img src=https://archive.org/services/img/australianflying00cutluoft alt=""></td>
+<td><span class="useful">USEFUL</span></td>
+<td>australianflying00cutluoft</td>
+<td>(16.45, 22.74, 21.77)</td>
+</tr>
+<tr>
+<td><img src=https://archive.org/services/img/australianimperi07gulluoft alt=""></td>
+<td><span class="useful">USEFUL</span></td>
+<td>australianimperi07gulluoft</td>
+<td>(15.69, 20.80, 20.37)</td>
+</tr>
+<tr>
+<td><img src=https://archive.org/services/img/autobiographyofd00croc alt=""></td>
+<td><span class="not-useful">not useful</span></td>
+<td>autobiographyofd00croc</td>
+<td>(9.77, 7.10, 3.35)</td>
+</tr>
+<tr>
+<td><img src=https://archive.org/services/img/autocamping00brimrich alt=""></td>
+<td><span class="not-useful">not useful</span></td>
+<td>autocamping00brimrich</td>
+<td>(5.02, 3.12, 2.56)</td>
+</tr>
+<tr>
+<td><img src=https://archive.org/services/img/avanteta00gaug alt=""></td>
+<td><span class="not-useful">not useful</span></td>
+<td>avanteta00gaug</td>
+<td>(3.88, 11.42, 7.80)</td>
+</tr>
+<tr>
+<td><img src=https://archive.org/services/img/babylonianepicof00languoft alt=""></td>
+<td><span class="useful">USEFUL</span></td>
+<td>babylonianepicof00languoft</td>
+<td>(13.86, 16.84, 19.62)</td>
+</tr>
+<tr>
+<td><img src=https://archive.org/services/img/bakitara00henr alt=""></td>
+<td><span class="not-useful">not useful</span></td>
+<td>bakitara00henr</td>
+<td>(4.12, 6.60, 7.39)</td>
+</tr>
+<tr>
+<td><img src=https://archive.org/services/img/balticcaucasians00gleiuoft alt=""></td>
+<td><span class="useful">USEFUL</span></td>
+<td>balticcaucasians00gleiuoft</td>
+<td>(17.38, 19.19, 16.94)</td>
+</tr>
+<tr>
+<td><img src=https://archive.org/services/img/banyankole00john alt=""></td>
+<td><span class="not-useful">not useful</span></td>
+<td>banyankole00john</td>
+<td>(3.57, 3.73, 2.52)</td>
+</tr>
+<tr>
+<td><img src=https://archive.org/services/img/bariummessengers1956pres alt=""></td>
+<td><span class="not-useful">not useful</span></td>
+<td>bariummessengers1956pres</td>
+<td>(8.12, 9.28, 8.57)</td>
+</tr>
+<tr>
+<td><img src=https://archive.org/services/img/bariummessengers1962pres alt=""></td>
+<td><span class="not-useful">not useful</span></td>
+<td>bariummessengers1962pres</td>
+<td>(6.74, 8.42, 8.00)</td>
+</tr>
+<tr>
+<td><img src=https://archive.org/services/img/bariummessengers1991pres alt=""></td>
+<td><span class="not-useful">not useful</span></td>
+<td>bariummessengers1991pres</td>
+<td>(5.43, 6.21, 5.50)</td>
+</tr>
+<tr>
+<td><img src=https://archive.org/services/img/basutoofbasutola00dutt alt=""></td>
+<td><span class="not-useful">not useful</span></td>
+<td>basutoofbasutola00dutt</td>
+<td>(3.71, 3.11, 4.37)</td>
+</tr>
+<tr>
+<td><img src=https://archive.org/services/img/battlefield192300univ alt=""></td>
+<td><span class="not-useful">not useful</span></td>
+<td>battlefield192300univ</td>
+<td>(1.79, 0.77, 0.63)</td>
+</tr>
+<tr>
+<td><img src=https://archive.org/services/img/behavioristicint00lashuoft alt=""></td>
+<td><span class="not-useful">not useful</span></td>
+<td>behavioristicint00lashuoft</td>
+<td>(4.79, 5.19, 5.49)</td>
+</tr>
+<tr>
+<td><img src=https://archive.org/services/img/benjonsonsconver00jonsuoft alt=""></td>
+<td><span class="not-useful">not useful</span></td>
+<td>benjonsonsconver00jonsuoft</td>
+<td>(2.91, 2.89, 3.25)</td>
+</tr>
+<tr>
+<td><img src=https://archive.org/services/img/bermudahouses00humpuoft alt=""></td>
+<td><span class="not-useful">not useful</span></td>
+<td>bermudahouses00humpuoft</td>
+<td>(11.74, 9.38, 8.17)</td>
+</tr>
+<tr>
+<td><img src=https://archive.org/services/img/bernardvaughansj00martuoft alt=""></td>
+<td><span class="not-useful">not useful</span></td>
+<td>bernardvaughansj00martuoft</td>
+<td>(12.66, 11.76, 8.50)</td>
+</tr>
+<tr>
+<td><img src=https://archive.org/services/img/berossosunddieba00schnuoft alt=""></td>
+<td><span class="not-useful">not useful</span></td>
+<td>berossosunddieba00schnuoft</td>
+<td>(2.95, 2.78, 3.08)</td>
+</tr>
+<tr>
+<td><img src=https://archive.org/services/img/bibliatojestksie00wuje alt=""></td>
+<td><span class="not-useful">not useful</span></td>
+<td>bibliatojestksie00wuje</td>
+<td>(1.62, 1.68, 1.51)</td>
+</tr>
+<tr>
+<td><img src=https://archive.org/services/img/bibliographemode2021pari alt=""></td>
+<td><span class="not-useful">not useful</span></td>
+<td>bibliographemode2021pari</td>
+<td>(3.31, 2.37, 0.76)</td>
+</tr>
+<tr>
+<td><img src=https://archive.org/services/img/bibliographiedes00girauoft alt=""></td>
+<td><span class="not-useful">not useful</span></td>
+<td>bibliographiedes00girauoft</td>
+<td>(2.17, 1.97, 1.54)</td>
+</tr>
+<tr>
+<td><img src=https://archive.org/services/img/bibliotecahisp00garcuoft alt=""></td>
+<td><span class="not-useful">not useful</span></td>
+<td>bibliotecahisp00garcuoft</td>
+<td>(3.60, 3.73, 3.41)</td>
+</tr>
+<tr>
+<td><img src=https://archive.org/services/img/biblischtalmudis00preu alt=""></td>
+<td><span class="not-useful">not useful</span></td>
+<td>biblischtalmudis00preu</td>
+<td>(10.41, 8.30, 4.66)</td>
+</tr>
+<tr>
+<td><img src=https://archive.org/services/img/biologyofbirds00thom alt=""></td>
+<td><span class="not-useful">not useful</span></td>
+<td>biologyofbirds00thom</td>
+<td>(3.37, 3.65, 2.48)</td>
+</tr>
+<tr>
+<td><img src=https://archive.org/services/img/birdsbeastsflowe00lawruoft alt=""></td>
+<td><span class="not-useful">not useful</span></td>
+<td>birdsbeastsflowe00lawruoft</td>
+<td>(4.64, 4.81, 4.94)</td>
+</tr>
+<tr>
+<td><img src=https://archive.org/services/img/birdsinlegendfab00inge alt=""></td>
+<td><span class="not-useful">not useful</span></td>
+<td>birdsinlegendfab00inge</td>
+<td>(8.24, 12.66, 7.30)</td>
+</tr>
+<tr>
+<td><img src=https://archive.org/services/img/birdsofamerica01pear alt=""></td>
+<td><span class="not-useful">not useful</span></td>
+<td>birdsofamerica01pear</td>
+<td>(10.19, 9.44, 9.47)</td>
+</tr>
+<tr>
+<td><img src=https://archive.org/services/img/birdsofamerica02pear alt=""></td>
+<td><span class="not-useful">not useful</span></td>
+<td>birdsofamerica02pear</td>
+<td>(9.73, 8.01, 6.70)</td>
+</tr>
+<tr>
+<td><img src=https://archive.org/services/img/birdsofamerica03pear alt=""></td>
+<td><span class="not-useful">not useful</span></td>
+<td>birdsofamerica03pear</td>
+<td>(8.27, 7.04, 6.90)</td>
+</tr>
+<tr>
+<td><img src=https://archive.org/services/img/birdsofcaliforni01daws alt=""></td>
+<td><span class="not-useful">not useful</span></td>
+<td>birdsofcaliforni01daws</td>
+<td>(2.98, 4.27, 2.83)</td>
+</tr>
+<tr>
+<td><img src=https://archive.org/services/img/birdsofcaliforni02daws alt=""></td>
+<td><span class="not-useful">not useful</span></td>
+<td>birdsofcaliforni02daws</td>
+<td>(4.62, 5.27, 4.60)</td>
+</tr>
+<tr>
+<td><img src=https://archive.org/services/img/bishopjosephbutl00bakeuoft alt=""></td>
+<td><span class="not-useful">not useful</span></td>
+<td>bishopjosephbutl00bakeuoft</td>
+<td>(1.19, 1.00, 2.14)</td>
+</tr>
+<tr>
+<td><img src=https://archive.org/services/img/blackdogothersto00coppuoft alt=""></td>
+<td><span class="useful">USEFUL</span></td>
+<td>blackdogothersto00coppuoft</td>
+<td>(19.09, 24.70, 23.35)</td>
+</tr>
+<tr>
+<td><img src=https://archive.org/services/img/bluebookofscreen00unse alt=""></td>
+<td><span class="not-useful">not useful</span></td>
+<td>bluebookofscreen00unse</td>
+<td>(9.11, 5.91, 9.03)</td>
+</tr>
+<tr>
+<td><img src=https://archive.org/services/img/bodybuilditsinhe00dave alt=""></td>
+<td><span class="not-useful">not useful</span></td>
+<td>bodybuilditsinhe00dave</td>
+<td>(2.41, 3.45, 6.53)</td>
+</tr>
+<tr>
+<td><img src=https://archive.org/services/img/bodybuilditsinhe00daveuoft alt=""></td>
+<td><span class="not-useful">not useful</span></td>
+<td>bodybuilditsinhe00daveuoft</td>
+<td>(5.73, 4.96, 4.02)</td>
+</tr>
+<tr>
+<td><img src=https://archive.org/services/img/bollettinodellep1923bibl alt=""></td>
+<td><span class="not-useful">not useful</span></td>
+<td>bollettinodellep1923bibl</td>
+<td>(5.16, 1.66, 1.61)</td>
+</tr>
+<tr>
+<td><img src=https://archive.org/services/img/bomb1923virg alt=""></td>
+<td><span class="not-useful">not useful</span></td>
+<td>bomb1923virg</td>
+<td>(7.86, 3.11, 1.68)</td>
+</tr>
+<tr>
+<td><img src=https://archive.org/services/img/bookofcommongree00unknuoft alt=""></td>
+<td><span class="not-useful">not useful</span></td>
+<td>bookofcommongree00unknuoft</td>
+<td>(11.21, 11.14, 10.44)</td>
+</tr>
+<tr>
+<td><img src=https://archive.org/services/img/bookofestherinli00hosc alt=""></td>
+<td><span class="not-useful">not useful</span></td>
+<td>bookofestherinli00hosc</td>
+<td>(4.44, 3.92, 2.74)</td>
+</tr>
+<tr>
+<td><img src=https://archive.org/services/img/bookofloverbelov00lluluoft alt=""></td>
+<td><span class="useful">USEFUL</span></td>
+<td>bookofloverbelov00lluluoft</td>
+<td>(25.67, 30.65, 30.33)</td>
+</tr>
+<tr>
+<td><img src=https://archive.org/services/img/bookofoldedinbur12olde alt=""></td>
+<td><span class="useful">USEFUL</span></td>
+<td>bookofoldedinbur12olde</td>
+<td>(51.47, 42.02, 16.07)</td>
+</tr>
+<tr>
+<td><img src=https://archive.org/services/img/booksthatcountdi00grayuoft alt=""></td>
+<td><span class="not-useful">not useful</span></td>
+<td>booksthatcountdi00grayuoft</td>
+<td>(7.47, 3.60, 4.59)</td>
+</tr>
+<tr>
+<td><img src=https://archive.org/services/img/botanyprinciples00sinn alt=""></td>
+<td><span class="not-useful">not useful</span></td>
+<td>botanyprinciples00sinn</td>
+<td>(7.47, 6.87, 5.11)</td>
+</tr>
+<tr>
+<td><img src=https://archive.org/services/img/briefederbrder00grimuoft alt=""></td>
+<td><span class="not-useful">not useful</span></td>
+<td>briefederbrder00grimuoft</td>
+<td>(7.16, 4.40, 3.09)</td>
+</tr>
+<tr>
+<td><img src=https://archive.org/services/img/briefsurveyofpri00moriuoft alt=""></td>
+<td><span class="not-useful">not useful</span></td>
+<td>briefsurveyofpri00moriuoft</td>
+<td>(5.94, 5.66, 5.69)</td>
+</tr>
+
+        </table>
+    </body>
+</html>
+
