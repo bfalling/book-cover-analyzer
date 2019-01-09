@@ -1,15 +1,5 @@
 # Takes a list of Archive identifiers via stdin, outputs an HTML page
 # containing a table listing cover images and calculated "usefulness"
-#
-# Example:
-#   cat identifiers.txt | python cover-analyzer.py > results.html
-#
-# Requirements:
-# - Python 3
-# - ImageMagick
-# - wand Python library
-#
-# Contact: Brenton Cheng <brenton@archive.org>
 
 from wand.image import Image
 from urllib.request import urlopen
