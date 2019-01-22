@@ -1,5 +1,11 @@
 # Takes a list of Archive identifiers via stdin, outputs an HTML page
-# containing a table listing cover images and calculated "usefulness"
+# containing a table listing cover images and calculated "usefulness".
+# Also writes a text file containing the identifiers of items with
+# less useful covers and which should probably use their title page as
+# the thumbnail.
+
+# TODO: Examine the actual cover images, instead of the existing thumb
+#       cuz the existing thumb could already be the title page.
 
 from wand.image import Image
 from urllib.request import urlopen
@@ -11,7 +17,12 @@ grid_width = 16 # Width of grid to shrink to for color checking
 grid_height = 16 # Height of grid to shrink to for color checking
 side_length_fraction_to_keep = 0.6 # What fraction of each dimension to keep (rest is cropped)
 human_scale_factor = 255 # Desired scale of RGB values, e.g. 0-255, for readability
-threshold_deviation = 15.0 # Max standard deviation for indicating cloth cover
+threshold_deviation = 12.0 # Max standard deviation for indicating cloth cover
+file_of_ids_to_use_title_page = 'title_page_ids.txt'
+
+sys.stderr.write('Starting')
+
+title_page_ids_file = open(file_of_ids_to_use_title_page, 'w')
 
 item_outputs = []
 for line in sys.stdin:
@@ -25,6 +36,15 @@ for line in sys.stdin:
 
     try:
         with urlopen(url) as response:
+
+            # Handle placeholder images
+            if response.geturl() == 'https://archive.org/images/notfound.png':
+                item_output.append('<span class="not-useful">not useful</span>')
+                item_output.append('<a href="https://archive.org/details/{0}">{0}</a>'.format(identifier))
+                item_output.append('') # Needed to keep number of output cells constant
+                item_outputs.append(item_output)
+                continue
+
             with Image(file=response) as image:
                 (image_width, image_height) = image.size
 
@@ -52,6 +72,7 @@ for line in sys.stdin:
                 deviations = (numpy.std(reds), numpy.std(greens), numpy.std(blues))
                 if all([deviations[i] < threshold_deviation for i in [0, 1, 2]]):
                     item_output.append('<span class="not-useful">not useful</span>')
+                    title_page_ids_file.write(identifier + '\n')
                 else:
                     item_output.append('<span class="useful">USEFUL</span>')
 
@@ -63,11 +84,13 @@ for line in sys.stdin:
 
     except Exception as e:
         item_output.append('<span class="error">error reading</span>')
-        item_output.append(identifier)
+        item_output.append('<a href="https://archive.org/details/{0}">{0}</a>'.format(identifier))
         item_output.append('') # Needed to keep number of output cells constant
         sys.stderr.write('\nERROR with image for {identifier}: {error}\n'.format(identifier=identifier, error=str(e)))
 
     item_outputs.append(item_output)
+
+title_page_ids_file.close()
 
 # Output HTML
 print("""
@@ -106,4 +129,4 @@ print("""
 </html>
 """)
 
-sys.stderr.write('done.\n')
+sys.stderr.write('done\n')
