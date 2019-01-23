@@ -6,6 +6,8 @@
 #
 # Requirements:
 # - `pip install opencv-python`
+#
+# Thanks to Peter De Wachter for the algorithm!
 
 # TODO: Examine the actual cover images, instead of the existing thumb
 #       cuz the existing thumb could already be the title page.
