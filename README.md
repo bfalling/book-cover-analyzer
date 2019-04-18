@@ -1,5 +1,18 @@
 Explorations of book cover analysis, e.g. detecting when a book has a useful cover image.
 
+## cover-analyzer-edges.py
+
+Improved cover analyzer provided by community member. Use instead of `cover-analyzer.py`.
+
+### Requirements
+- Python 3
+- OpenCV
+
+### Example
+```
+  cat cover_sources/y2k-useful-covers-100.txt | python cover-analyzer-edges.py > output/results-y2k-useful-covers-100.html
+```
+
 ## cover-analyzer.py
 
 Takes a list of Internet Archive (Archive.org) item identifiers via stdin, outputs an HTML page containing a table
